@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eternal Grind - ZPRPG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="title-bar">Eternal Grind — Zero-Player RPG</header>
+
+  <main class="dashboard">
+
+    <!-- Left Column: Character Sheet -->
+    <section class="panel col-left">
+      <div class="panel-header">Character Sheet</div>
+      <div class="panel-body">
+        <div id="identity">
+          <p><strong>Name:</strong> <span id="char-name"></span></p>
+          <p><strong>Level:</strong> <span id="char-level"></span></p>
+          <p><strong>Race:</strong> <span id="char-race"></span></p>
+          <p><strong>Class:</strong> <span id="char-class"></span></p>
+        </div>
+
+        <div class="panel-header sub-header">Stats</div>
+        <table id="stats-table"></table>
+
+        <div class="panel-header sub-header">Equipment</div>
+        <ul id="equipment-list"></ul>
+
+        <div class="panel-header sub-header">Spells &amp; Abilities</div>
+        <div class="scroll-box">
+          <ul id="spell-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Center Column: Engine of Progress -->
+    <section class="panel col-center">
+      <div class="panel-header">The Engine of Progress</div>
+      <div class="panel-body center-body">
+        <div id="location" class="location-header"></div>
+
+        <div class="portrait" id="portrait">&#x2694;&#xFE0F;</div>
+
+        <div class="bar-group">
+          <label id="task-label" class="bar-label">Task</label>
+          <div class="bar-track"><div class="bar-fill task-fill" id="task-bar"></div></div>
+        </div>
+
+        <div class="bar-group">
+          <label class="bar-label">Experience</label>
+          <div class="bar-track"><div class="bar-fill xp-fill" id="xp-bar"></div></div>
+        </div>
+
+        <div class="bar-group">
+          <label id="plot-label" class="bar-label">Plot</label>
+          <div class="bar-track"><div class="bar-fill plot-fill" id="plot-bar"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Column: Data Feed -->
+    <section class="panel col-right">
+      <div class="panel-header">Data Feed</div>
+      <div class="panel-body feed-body">
+        <div class="panel-header sub-header">Inventory</div>
+        <ul id="inventory-list" class="scroll-box"></ul>
+
+        <div class="panel-header sub-header">Quest Log</div>
+        <div id="quest-log" class="scroll-box log-box"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
