@@ -35,34 +35,47 @@ const TASKS = [
   "Filing a 1040-EZ", "Staring into the middle distance",
   "Organizing a sock drawer", "Explaining the internet to a rock",
   "Searching for a lost remote", "Counting ceiling tiles",
-  "Simulating a personality", "Buffing out a scratch in reality"
+  "Simulating a personality", "Buffing out a scratch in reality",
+  "Daydreaming about cheese", "Alphabetizing soup cans",
+  "Sorting a spreadsheet column", "Doom-scrolling LinkedIn",
+  "Applying to Blue Man Group", "Pressing a crosswalk button",
+  "Adjusting the thermostat", "Turning the pillow to the cool side"
 ];
 
 const LOCATIONS = [
   "The Forest of Mild Inconvenience", "The Cave of Echoing Sighs",
   "Downtown Boredom", "The Desert of Dry Humor",
   "Mount Mediocrity", "The Swamps of 'I'll Do It Tomorrow'",
-  "The Suburbs of Despair"
+  "The Suburbs of Despair", "The Villages (Florida)",
+  "The Complaints Department", "The Closet",
+  "The Basement of No Return", "The Attic of Surrender"
 ];
 
 const ITEM_ADJECTIVES = [
   "Dull", "Polished", "Forbidden", "Rusty", "Lamentable",
   "Insignificant", "Glowing", "Slightly Damp", "Overpriced",
-  "Mediocre", "Legendary-ish"
+  "Mediocre", "Legendary-ish", "Moderately Sticky", "Dusty",
+  "Bullet-Riddled", "Slightly Reeking", "Retro-Ish", "Somewhat Cursed"
 ];
 
 const ITEM_NOUNS = [
   "Scissors of Regret", "Pebble of Mediocrity", "Scone of Power",
   "Lint of Destiny", "Paperclip of Hope", "Broken Twig",
   "Expired Coupon", "Sock of Mystery", "Unfinished Novel",
-  "Jar of Pickled Thoughts"
+  "Jar of Pickled Thoughts", "1980s Goldstar TV", "Troll Doll",
+  "Off-Brand Labubu", "McDonalds Sweet and Sour Sauce",
+  "Ceramic Elvis Bust", "Ron Jon Surf Shop T-Shirt",
+  "Sneakers of Minor Destiny", "Poker Chips of Fate"
 ];
 
 const MONSTERS = [
   "A Literal Metaphor", "The Concept of Ennui", "A Low-Level Bugbear",
   "An Imaginary Friend", "A Confused Salesman",
   "A Dust Bunny of Doom", "The Ghost of a Dead Pixel",
-  "A Sentient Terms of Service Agreement"
+  "A Sentient Terms of Service Agreement",
+  "A Grumpy Barista", "Two Podcasters Who Won't Shut Up",
+  "A Five-Year-Old on a Sugar Rush", "The HR Department",
+  "A Belligerent Walmart Greeter", "\"Screech\" from \"Saved By the Bell\""
 ];
 
 const SPELLS = [
@@ -87,7 +100,18 @@ const ACTS = [
   "Act I: The Tutorial Nobody Asked For",
   "Act II: The Grinding Begins",
   "Act III: Despair in Four Stages",
-  "Act IV: The Post-Credits Confusion"
+  "Act IV: The Post-Credits Confusion",
+  "Act V: That Wasn't the End",
+  "Act VI: The Writer's Barely-Disguised Fetish",
+  "Act VII: Mid-Season Filler",
+  "Act VIII: Do You Really Read These?",
+  "Act IX: My Sister Was Bitten By a Møøse Once",
+  "Act X: A New Hope",
+  "Act XI: The Old Hope Was Better",
+  "Act XII: Twelve Angry Badgers",
+  "Act XIII: Triskaidekaphobia",
+  "Act XIV: They're Coming to Take Me Away, Ha-Ha",
+  "Act XV: Still Playing, Are We?"
 ];
 
 // === HELPERS ===
