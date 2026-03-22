@@ -330,6 +330,14 @@ function renderTaskBar() {
     label = state.currentTask + " (" + pct + "%)";
   }
   document.getElementById("task-label").textContent = label;
+
+  // Update portrait emoji based on current phase
+  var portrait = document.getElementById("portrait");
+  if (state.taskPhase === "battle") {
+    portrait.textContent = "\u2694\uFE0F";
+  } else {
+    portrait.textContent = "\uD83D\uDE47\uD83C\uDFFC\u200D\u2640\uFE0F";
+  }
 }
 
 function renderXPBar() {
