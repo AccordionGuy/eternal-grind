@@ -91,10 +91,48 @@ const STATS = [
   "Caffeine Level", "Existential Dread"
 ];
 
-const EQUIPMENT_SLOTS = [
-  "Helm", "Torso", "Left Hand", "Right Hand",
-  "Legs", "Boots", "Neck Amulet", "Ring (Existential)"
-];
+const EQUIPMENT = {
+  "Helm": [
+    "Dented Bucket", "Thinking Cap", "Tin Foil Hat", "Visor of Denial",
+    "Crown of Mild Authority", "Headband of Overthinking",
+    "Hard Hat of Soft Skills", "Beanie of Bewilderment"
+  ],
+  "Torso": [
+    "Ill-Fitting Chainmail", "Hawaiian Shirt of Protection",
+    "Sweater Vest of Resilience", "Bathrobe of Power",
+    "Breastplate of Participation", "Hoodie of Invisibility",
+    "Polo Shirt of Middle Management", "Poncho of Plausible Deniability"
+  ],
+  "Hands": [
+    "Rubber Chicken", "Stapler of Justice", "Foam Finger of Fate",
+    "Spatula of Smiting", "TV Remote of Command", "Rolled-Up Newspaper",
+    "Pool Noodle of Reckoning", "Half-Eaten Sandwich"
+  ],
+  "Legs": [
+    "Cargo Shorts of Holding", "Sweatpants of Agility",
+    "Khakis of Conformity", "Jorts of Valor",
+    "Leggings of Slight Discomfort", "Corduroy Pants of Stealth",
+    "Pajama Bottoms of Indifference", "Kilt of Questionable Decisions"
+  ],
+  "Boots": [
+    "Crocs of Speed", "Flip-Flops of Fury", "Sandals with Socks",
+    "Galoshes of Grandeur", "Slippers of Sneaking",
+    "Steel-Toed Loafers", "Platform Shoes of Intimidation",
+    "Velcro Sneakers of Convenience"
+  ],
+  "Neck Amulet": [
+    "Lanyard of Authority", "Whistle of Panic",
+    "Mood Ring on a String", "USB Drive of Secrets",
+    "Macaroni Necklace of Sentimental Value", "Tie of Reluctant Formality",
+    "Scarf of Mysterious Origins", "Badge of Plausible Employment"
+  ],
+  "Ring (Existential)": [
+    "Ring of Mild Concern", "Band of Adequate Effort",
+    "Mood Ring of Existential Dread", "Decoder Ring of Disappointment",
+    "Ring Pop of Power", "Signet Ring of 'I Guess'",
+    "Friendship Bracelet (Repurposed)", "O-Ring of Mechanical Failure"
+  ]
+};
 
 const ACTS = [
   "Act I: The Tutorial Nobody Asked For",
@@ -172,8 +210,13 @@ function initCharacter() {
 
   // Starting equipment
   state.equipment = {};
-  EQUIPMENT_SLOTS.forEach(function (slot) {
-    state.equipment[slot] = generateItem();
+  Object.keys(EQUIPMENT).forEach(function (slot) {
+    if (slot === "Hands") {
+      state.equipment["Left Hand"] = pick(EQUIPMENT["Hands"]);
+      state.equipment["Right Hand"] = pick(EQUIPMENT["Hands"]);
+    } else {
+      state.equipment[slot] = pick(EQUIPMENT[slot]);
+    }
   });
 
   // One starting spell
@@ -244,10 +287,15 @@ function renderStats() {
   });
 }
 
+const EQUIPMENT_DISPLAY_SLOTS = [
+  "Helm", "Torso", "Left Hand", "Right Hand",
+  "Legs", "Boots", "Neck Amulet", "Ring (Existential)"
+];
+
 function renderEquipment() {
   var list = document.getElementById("equipment-list");
   list.innerHTML = "";
-  EQUIPMENT_SLOTS.forEach(function (slot) {
+  EQUIPMENT_DISPLAY_SLOTS.forEach(function (slot) {
     var li = document.createElement("li");
     li.textContent = slot + ": " + (state.equipment[slot] || "—");
     list.appendChild(li);
